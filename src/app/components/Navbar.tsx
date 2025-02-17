@@ -13,13 +13,13 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["vision", "features", "strategy", "brand"]
-      const scrollPosition = window.scrollY + 100 // Offset for better accuracy
+      const offset = 100 // Offset for better accuracy
 
       for (const section of sections) {
         const element = document.getElementById(section)
         if (element) {
           const { top, bottom } = element.getBoundingClientRect()
-          if (top <= 100 && bottom >= 100) {
+          if (top <= offset && bottom >= offset) {
             setActiveSection(section)
             break
           }
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="container mx-auto flex justify-between items-center py-2">
       <Link href="/" className="flex items-center">
-        <Logo className="h-full w-auto" />
+        <Logo className="h-8 w-auto" />
       </Link>
 
       {/* Desktop menu */}

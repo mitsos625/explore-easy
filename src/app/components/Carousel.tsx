@@ -28,12 +28,13 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       )
     })
 
-    observerRefs.current.forEach((ref, index) => {
+    const currentRefs = observerRefs.current
+    currentRefs.forEach((ref, index) => {
       if (ref) observers[index].observe(ref)
     })
 
     return () => {
-      observerRefs.current.forEach((ref, index) => {
+      currentRefs.forEach((ref, index) => {
         if (ref) observers[index].unobserve(ref)
       })
     }
