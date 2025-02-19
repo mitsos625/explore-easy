@@ -1,5 +1,8 @@
 "use client"
 
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
 import type React from "react"
 import { useRef, useEffect, useState } from "react"
 import { motion } from "framer-motion"

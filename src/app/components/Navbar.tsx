@@ -47,10 +47,14 @@ const Navbar: React.FC = () => {
   }
 
   const navItems = [
-    { id: "vision", label: "Το Όραμά μας" },
+    { id: "vision", label: "Όραμα" },
     { id: "features", label: "Χαρακτηριστικά" },
-    { id: "strategy", label: "Στρατηγική" },
-    { id: "brand", label: "Brand" },
+    { id: "product", label: "Προϊόν" },
+    { id: "market", label: "Αγορά" },
+    { id: "revenue", label: "Έσοδα" },
+    { id: "financials", label: "Οικονομικά" },
+    { id: "marketing", label: "Μάρκετινγκ" },
+    { id: "next-steps", label: "Επόμενα Βήματα" },
   ]
 
   return (
