@@ -2,8 +2,9 @@
 import { useState, useEffect } from "react"
 import { ArrowUp } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import React from 'react';
 
-const FloatingActionButton = () => {
+const FloatingActionButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const FloatingActionButton = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          className="fixed bottom-5 right-5 bg-explore-accent text-explore-dark p-3 rounded-full shadow-lg z-50"
+          className="fixed bottom-4 right-4 bg-blue-500 text-white p-4 rounded-full shadow-lg"
           onClick={scrollToTop}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
